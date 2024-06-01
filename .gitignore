@@ -21,4 +21,6 @@ __pycache__/
 
 
 .DS_Store
-cohorts/2024/02-experiment-tracking/.vscode/launch.json
+launch.json
+
+/cohorts/2024/02-experiment-tracking/mlruns
