@@ -1,6 +1,6 @@
 import os
 import pickle
-import click
+# import click
 import pandas as pd
 
 from sklearn.feature_extraction import DictVectorizer
@@ -36,15 +36,16 @@ def preprocess(df: pd.DataFrame, dv: DictVectorizer, fit_dv: bool = False):
     return X, dv
 
 
-@click.command()
-@click.option(
-    "--raw_data_path",
-    help="Location where the raw NYC taxi trip data was saved"
-)
-@click.option(
-    "--dest_path",
-    help="Location where the resulting files will be saved"
-)
+# @click.command()
+# @click.option(
+#     "--raw_data_path",
+#     help="Location where the raw NYC taxi trip data was saved"
+# )
+# @click.option(
+#     "--dest_path",
+#     help="Location where the resulting files will be saved"
+# )
+
 def run_data_prep(raw_data_path: str, dest_path: str, dataset: str = "green"):
     # Load parquet files
     df_train = read_dataframe(
@@ -80,4 +81,4 @@ def run_data_prep(raw_data_path: str, dest_path: str, dataset: str = "green"):
 
 
 if __name__ == '__main__':
-    run_data_prep()
+    run_data_prep(raw_data_path="/Users/dt00035/projects/personal/active/mlops-zoomcamp/cohorts/2024/02-experiment-tracking/data/raw", dest_path="/Users/dt00035/projects/personal/active/mlops-zoomcamp/cohorts/2024/02-experiment-tracking/data/processed")

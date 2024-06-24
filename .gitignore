@@ -21,3 +21,6 @@ __pycache__/
 
 
 .DS_Store
+launch.json
+
+/cohorts/2024/02-experiment-tracking/mlruns
